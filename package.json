@@ -1,0 +1,30 @@
+{
+  "name": "SkatteSimplifier",
+  "description": "A tool to simplify the yearly tax return report for the Swedish tax agency with Trading212 data.",
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">= 18.12"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/jest": "29.5.14",
+    "@types/node": "22.8.7",
+    "csv-parse": "5.5.6",
+    "jest": "29.7.0",
+    "rimraf": "6.0.1",
+    "ts-jest": "29.2.5",
+    "typescript": "5.6.3"
+  },
+  "scripts": {
+    "calculate": "pnpm build && node build/src/yearly/yearly.js",
+    "clean": "rimraf coverage build tmp",
+    "prebuild": "npm run lint",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "biome format --write .",
+    "typecheck": "tsc --noEmit"
+  }
+}
