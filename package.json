@@ -15,7 +15,7 @@
     "moment": "2.30.1",
     "rimraf": "6.0.1",
     "ts-jest": "29.2.5",
-    "typescript": "5.7.2"
+    "typescript": "5.7.3"
   },
   "scripts": {
     "calculate": "pnpm build && node build/src/yearly/yearly.js",
